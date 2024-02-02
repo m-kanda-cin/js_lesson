@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>if文</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  <script>
+  $(function(){
+    // ここに処理を記述
+    $('#button').on('click', function(){
+
+      var num = $('#value').val();
+
+      switch(num){
+        default:
+          window.alert("1-3で入力してください");
+          break;
+        case '1':
+          $('#box').css("background-color", "red");
+          break;
+        case '2':
+          $('#box').css("background-color", "rgb(13, 255, 45)");
+          break;
+        case '3':
+        $('#box').css("background-color", "blue");
+          break;
+      }
+      });
+  });
+  </script>
+</head>
+<body>
+  <input type="text" id="value">
+  <input type="button" id="button" value="ボタン">
+  <div id="box">
+  </div><!-- button -->
+</body>
+</html>
